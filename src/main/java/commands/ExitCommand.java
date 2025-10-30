@@ -15,6 +15,11 @@ public class ExitCommand implements Command {
         System.exit(0);
     }
 
+    @Override
+    public String type() {
+        return "exit is a shell builtin";
+    }
+
     private StatusReport checkArgs(List<String> args) {
         StatusReport statusReport = new StatusReport();
         if (args.isEmpty()) {
